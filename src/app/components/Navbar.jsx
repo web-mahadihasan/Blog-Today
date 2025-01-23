@@ -19,7 +19,7 @@ const Navbar = async () => {
                 <div className='space-x-2'>
                     {
                         isAuthenticate ? 
-                        <Link href={"/api/auth/logout"}>
+                        <Link href={"api/auth/logout"}>
                             <button
                             className="px-4 py-1.5 border border-[#3e3939] bg-base-100 text-[#000000] hover:bg-[#000000] hover:text-white transition duration-300 rounded-md shadow-md">
                                 Log Out
@@ -27,14 +27,14 @@ const Navbar = async () => {
                         </Link>
                         : 
                        <> 
-                       <Link href={"/api/auth/login"}>
+                       <Link href={"api/auth/login"}>
                         <button
                         className="px-4 py-1.5 border border-[#3e3939] bg-[#000000] text-white hover:bg-transparent hover:text-[#000] transition duration-300 rounded-md shadow-md">
                             Log in
                         </button>
                         </Link>
                         
-                        <Link href={"/api/auth/register"}>                       
+                        <Link href={"api/auth/register"}>                       
                             <button
                             className="px-4 py-1.5 border border-[#3e3939] bg-base-100 text-[#000000] hover:bg-[#000000] hover:text-white transition duration-300 rounded-md shadow-md">
                                 Register

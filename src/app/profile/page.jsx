@@ -10,7 +10,7 @@ const Profile = async () => {
   // const defaultImage = "../../assets/hacker.png"
 
   if (!user) {
-    redirect("/api/auth/login?post_login_redirect_url=/profile")
+    redirect("/api/auth/login")
   }
   return (
     <div className='w-full min-h-full'>

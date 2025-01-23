@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import NavItems from './NavItems'
 // import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
-import { getKindeServerSession, LoginLink, LogoutLink, RegisterLink, isLoading, isAuthenticated } from '@kinde-oss/kinde-auth-nextjs/server';
+import { getKindeServerSession, LoginLink, LogoutLink, RegisterLink, isLoading } from '@kinde-oss/kinde-auth-nextjs/server';
 // const { user, isLoading, isAuthenticated, login, logout } = useKindeBrowserClient()
 
 const Navbar = async () => {

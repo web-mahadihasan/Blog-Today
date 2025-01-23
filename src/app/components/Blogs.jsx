@@ -32,10 +32,10 @@ const Blogs =  () => {
     
   return (
     <div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {
             paginatedData?.map(data => <div key={data.id} className="p-4 border border-gray-300 rounded-md shadow group hover:shadow-lg">
-                <Link href={`/blog/${data.id}`} className="text-lg text-gray-700 capitalize duration-300 transition-all group-hover:text-blue-600 group-hover:underline">
+                <Link href={`/blog/${data.id}`} className="text-xl text-gray-700 capitalize duration-300 transition-all group-hover:text-blue-600 group-hover:underline">
                   {data.title}
                 </Link>
             </div>)

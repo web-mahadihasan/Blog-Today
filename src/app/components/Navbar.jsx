@@ -8,7 +8,7 @@ import { getKindeServerSession, LoginLink, LogoutLink, RegisterLink, isLoading }
 const Navbar = async () => {
     const {getUser, isAuthenticated} = getKindeServerSession();
     const user = await getUser();
-
+    const isAuthenticate = isAuthenticated()
   return (
     <div className='w-full bg-white/60 sticky top-0 shadow-md z-50 backdrop-blur-xl'>
         <nav className='max-w-7xl mx-auto px-4 py-4 xl:px-0 flex items-center justify-between'>
@@ -20,7 +20,7 @@ const Navbar = async () => {
                 {
                     !isLoading && <div className='space-x-2'>
                         {
-                        isAuthenticated ? 
+                        isAuthenticate ? 
                         // <Link href={"api/auth/logout"}>
                         <LogoutLink>
                             <button

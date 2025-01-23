@@ -12,6 +12,7 @@ const Profile = async () => {
   if (!user) {
     redirect("/api/auth/login")
   }
+  
   return (
     <div className='w-full min-h-full'>
       <div className='max-w-3xl mx-auto flex items-center gap-8 border blog-details min-h-[30vh] my-24 p-6 lg:p-10 rounded-md' 

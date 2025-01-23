@@ -14,6 +14,9 @@ const Navbar = async () => {
             </div>
             <div className='flex items-center gap-4'>
                 <NavItems/>
+                {
+                    !isLoading &&
+                
                 <div className='space-x-2'>
                     {
                         user ? 
@@ -40,7 +43,8 @@ const Navbar = async () => {
                         </Link>
                     </>
                     }
-                </div>   
+                </div> 
+                }
             </div>
         </nav>
     </div>

@@ -1,9 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Lexend } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import "./style.css"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+const lexend = Lexend({
+  variable: "--font-lexend",
+  subsets: ["latin"],
+  weight: ["400", "700"], // Add weights you want to use
 });
 
 const geistMono = Geist_Mono({
@@ -18,11 +26,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lexend.variable} antialiased`}
+        style={{ fontFamily: "var(--font-lexend), serif" }}
       >
-        {children}
+        <Navbar />
+
+        <main className={`min-h-screen max-w-7xl mx-auto px-4 xl:px-0`}>
+          {children}
+        </main>
+
+        <Footer />
       </body>
     </html>
   );

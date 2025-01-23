@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import NavItems from './NavItems'
-import { getKindeServerSession, LoginLink, LogoutLink, RegisterLink, isLoading } from '@kinde-oss/kinde-auth-nextjs/server';
+import { getKindeServerSession, LogoutLink, RegisterLink, isLoading } from '@kinde-oss/kinde-auth-nextjs/server';
 
 const Navbar = async () => {
     const {getUser} = getKindeServerSession();
@@ -11,7 +11,7 @@ const Navbar = async () => {
     <div className='w-full bg-white/60 sticky top-0 shadow-md z-50 backdrop-blur-xl'>
         <nav className='max-w-7xl mx-auto px-4 py-4 xl:px-0 flex items-center justify-between'>
             <div className='text-xl md:text-[26px] font-bold uppercase'>
-                <Link href={"/"}>Blog Bench</Link>
+                <Link href={"/"}>Blog Today</Link>
             </div>
             <div className='flex items-center gap-4'>
                 <NavItems/>

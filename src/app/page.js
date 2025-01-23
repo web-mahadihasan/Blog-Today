@@ -18,7 +18,7 @@ const  Home = async () => {
           <div className="max-w-md">
             <h1 className="mb-5 text-2xl md:text-4xl font-bold">Welcome to Our Blog</h1>
             <p className="mb-5">
-              This concise version should fit well for a blog banner. Let me know if you'd like any other tweaks! 😊
+              This concise version should fit well for a blog banner. Let me know if you&apos;d like any other tweaks! 😊
             </p>
             <Link href={'#blogs'}>
               <button

@@ -1,4 +1,4 @@
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+import { getKindeServerSession, isLoading } from '@kinde-oss/kinde-auth-nextjs/server'
 import React from 'react'
 import { redirect } from "next/navigation"
 import profile from "../../assets/hacker.png"
@@ -8,11 +8,11 @@ const Profile = async () => {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
   // const defaultImage = "../../assets/hacker.png"
-
-  if (!user) {
-    redirect("/api/auth/login")
-  }
   
+  if (!user) {
+    redirect('/api/auth/login?post_login_redirect_url=/profile')
+  }
+
   return (
     <div className='w-full min-h-full'>
       <div className='max-w-3xl mx-auto flex items-center gap-8 border blog-details min-h-[30vh] my-24 p-6 lg:p-10 rounded-md' 

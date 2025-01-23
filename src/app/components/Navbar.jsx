@@ -6,6 +6,7 @@ import { getKindeServerSession, LoginLink, LogoutLink, RegisterLink, isLoading }
 const Navbar = async () => {
     const {getUser} = getKindeServerSession();
     const user = await getUser();
+    
   return (
     <div className='w-full bg-white/60 sticky top-0 shadow-md z-50 backdrop-blur-xl'>
         <nav className='max-w-7xl mx-auto px-4 py-4 xl:px-0 flex items-center justify-between'>

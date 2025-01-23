@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Blogs from "./components/Blogs";
-import banner from "../assets/bg.png"
 
 const  Home = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts")
